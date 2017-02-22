@@ -1,0 +1,21 @@
+a:link,a:visited{
+background-color:yellow;
+color:white;
+padding:14px 25px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+}
+a:visited{
+background-color:cyan;}
+a:hover{
+background-color:lightgreen;
+}
+a:active{
+background-color:hotpink;
+}
+ul.a{
+list-style-type:circle;
+}
+ul.b{
+list-style-image:url('/home/bridgeit/Downloads/index.jpeg');}

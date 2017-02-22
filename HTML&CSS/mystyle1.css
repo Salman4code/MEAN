@@ -1,0 +1,40 @@
+p{
+margin-top:100px;
+margin-bottom:100px;
+margin-right:150px;
+margin-left:80px;
+}
+div{
+width:300px;
+margin:auto;
+border:1px solid red;
+}
+div {
+    max-width: 500px;
+    height: 100px;
+    background-color: powderblue;
+    padding : 25px;
+}
+h1 {
+text-shadow:3px 2px red;
+text-decoration:overline;
+    margin: 0 0 50px 0;
+}
+
+h2 {
+
+text-decoration:line-through;
+    margin: 20px 0 0 0;
+}
+p.dotted {outline-style: dotted;}
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+    font-style:italic;
+    font-size:14px;
+}
+p.normal{
+font-variant:normal;
+}
+p.small{
+font-variant:small-caps;
+}
