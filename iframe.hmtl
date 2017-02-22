@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Target Frames</title>
+<iframe src="menu.htm" style="border:none;" height="200" width="300"></iframe>
+</head>

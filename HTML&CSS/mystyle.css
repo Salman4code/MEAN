@@ -1,0 +1,17 @@
+/*body
+{
+background-color: lightblue;
+background-image:url("/home/bridgeit/Downloads/index1.jpeg");
+background-repeat:no-repeat;
+background-position:right top;
+background-attachment:fixed;
+}*/
+
+body{
+/*The shorthand property for background is background:*/
+background:#ffffff url("/home/bridgeit/Downloads/index1.jpeg") no-repeat right top;
+}
+h1{
+	color:navy;
+	margin-left:20px;
+}
