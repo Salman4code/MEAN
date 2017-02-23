@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+<style>
+#example1
+{
+background-image:url(/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_flwr.gif),url(/home/bridgeit/MEAN/HTML&CSS/Wallpapers/Wallpapers/coffee.jpg);
+background-position: right bottom,left top;
+background-repeat:no-repeat,repeat;
+padding:15px;
+}
+</style>
+</head>
+<body>
+<div id="example1">
+<h1>this is demo</h1>
+<p>See how its look</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.img {
+margin:5px;
+border:1px solid #ccc;
+float:left;
+width:180px;
+}
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+box-sizing:border-box;
+}
+
+.responsive
+{
+padding:0 6px;
+float:left;
+width:24.99999%;
+}
+@media only screen and (max-width:700px)
+{
+.responsive {
+width:49.99999%;
+margin:6px 0;
+}
+}
+@media only screen and (max-width:500px){
+.responsive {
+width:100%;
+}
+}
+.clearfix:after {
+content:" ";
+display:table;
+clear:both;
+}
+</style>
+</head>
+<body>
+<div class="responsive">
+<div class="img">
+  <a target="_blank" href="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_fjords.jpg">
+    <img src="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+</div>
+<div class="img">
+  <a target="_blank" href="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_forest.jpg">
+    <img src="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/1680_Travel-around-the-World3.jpg">
+    <img src="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/1680_Travel-around-the-World3.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_mountains.jpg">
+    <img src="/home/bridgeit/MEAN/HTML&CSS/Wallpapers/img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
+</html>
+
