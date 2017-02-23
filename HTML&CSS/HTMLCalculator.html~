@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<Title>Calculator</Title>
+<body>
+First Number : <input type="Text" value=""><br><br>
+Second Number : <input type="Text" value=""><br><br>
+</body>
+</html>

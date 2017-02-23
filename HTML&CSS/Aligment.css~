@@ -1,0 +1,26 @@
+/*.right
+{
+position:absolute;
+right:50px;
+width:300px;
+border:3px solid #73AD21;
+padding:10px;
+}*/
+.container{
+position:relative;
+width:100%;
+}
+.right{
+position:absolute;
+center:0px;
+width:200px;
+background-color:#b0e0e6;
+}
+body{
+margin :0;
+padding:0;
+}
+.center{
+padding:70px;
+border:3px solid green;
+}
