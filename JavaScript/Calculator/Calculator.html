@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+  <script src="calculator.js">
+  </script>
+</head>
+  <body>
+    <h1><center>Calculator</center></h1>
+  <table>
+    <div><tr><td>First Number ::</td><td><input type="text" id="first"></td></tr>
+    <tr><td>Second Number::</td><td><input type="text" id="second"></td></tr></div>
+    <tr><td>Result ::</td><td><input type="text" id="sum"></td></tr>
+    <div>
+  <tr><td><select class="button" id="operator">
+    <option value="Select">Select Operator</option>
+    <option value="Addition">+</option>
+    <option value="Substraction">-</option>
+    <<option value="Multiplication">*</option>
+    <option value="Divide">/</option>
+    <option value="Modulus">%</option>
+  </div>
+  </select></td>
+  <td><button class="button" onclick="calculate()">Submit</button></td></tr>
+</table>
+</body>
+</html>

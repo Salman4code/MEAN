@@ -1,0 +1,17 @@
+<html>
+<body>
+<script type="text/javascript">
+
+var age =20;
+
+if(age>18)
+{
+document.write("<B> Qualifying for driving</b>");
+}
+else
+{
+document.write("<B> Not Qualifying for driving</b>");
+}
+</script>
+</body>
+</html>

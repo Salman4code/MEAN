@@ -1,0 +1,12 @@
+<html>
+<head>
+<script src="first.js">
+</script>
+<noscript>
+Sorry....JavaScript is needed to go ahead..
+</noscript>
+</head>
+<body>
+<input type="button" onclick="sayHello()" value="Say Hello">
+</body>
+</html>
