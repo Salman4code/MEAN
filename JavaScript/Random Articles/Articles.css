@@ -1,0 +1,15 @@
+body{
+  background-color: Powderblue;
+  padding-top:100px;
+  text-align: center;
+}
+.sk
+{
+  color: purple;
+  font-style: italic;
+}
+div{
+  margin: 10%;
+  background-color: rgb(255, 146, 142);
+  border: 1px solid black;
+}
