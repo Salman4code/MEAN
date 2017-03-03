@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Student Information</title>
+<script type="text/javascript">
+
+
+      function tosubmit() {
+          // Getting the value of your text input
+           var name = document.getElementById("name").value;
+         var Age=document.getElementById("Age").value;
+           var rollno=document.getElementById("rollno").value;
+
+         // Storing the value above into localStorage
+           localStorage.setItem("name", name);
+           localStorage.setItem("Age",Age);
+          localStorage.setItem("rollno",rollno);
+
+        return true;
+    }
+  </script>
+
+
+  </head>
+  <body>
+<fieldset>
+<form  action="detail.html" onsubmit="tosubmit()" method="get">
+  <table>
+    <tr><td>Name</td><td><input id="name" type="text" name="name"></td></tr>
+    <tr>
+      <td>Age</td><td><input id="Age" type="text" name="Age"></td>
+    </tr>
+        <tr>
+          <td>Roll No:</td><td><input id = "rollno" type="text" name="rollno" ></td>
+        </tr>
+        <tr>
+          <td><input type="Submit"  value="Submit"></td>
+        </tr>
+  </table>
+</form>
+</fieldset>
+  </body>
+</html>

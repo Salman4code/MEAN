@@ -15,7 +15,7 @@ var sum=function(){
   //document.write(res);
   return res;
 };
-return {first:first,second:second,sum:sum};
+return {first,second,sum};
 };
 
   var num1=document.getElementById('first').value;

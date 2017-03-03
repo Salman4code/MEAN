@@ -6,11 +6,12 @@ function Input(firstname,lastname,age,country)
   this.country=country;
 }
 var userinput,userinput1;
+var firstname,lastname,age,country;
 function userOne(){
-   var firstname=document.getElementById('firstName').value;
-   var lastname=document.getElementById('lastName').value;
-   var age=document.getElementById('age').value;
-   var country=document.getElementById('country').value;
+    firstname=document.getElementById('firstName').value;
+    lastname=document.getElementById('lastName').value;
+    age=document.getElementById('age').value;
+    country=document.getElementById('country').value;
 
  userinput = new Input(firstname,lastname,age,country);
 console.log(userinput);
@@ -20,6 +21,7 @@ function userTwo()
 {
   firstname=document.getElementById('firstName').value;
   lastname=document.getElementById('lastName').value;
+//  age=document.getElementById('age').value;
   age=Number.parseInt(document.getElementById('age').value);
   country=document.getElementById('country').value;
  userinput1=new Input(firstname,lastname,age,country);
@@ -27,8 +29,10 @@ console.log(userinput1);
 return userinput1;
 }
 function finalResult() {
-//  if(userinput.firstname===userinput1.firstname && userinput.lastname===userinput1.lastname && userinput.age===userinput1.age && userinput.country===userinput1.country)
-if(userinput===userinput1)
+//  var np=userinput1
+ if(userinput.firstname===userinput1.firstname && userinput.lastname===userinput1.lastname && userinput.age===userinput1.age && userinput.country===userinput1.country)
+//if(userinput===userinput1)
+//if(userinput===np)
 {
   return true;
 }

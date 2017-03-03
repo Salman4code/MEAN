@@ -9,17 +9,19 @@
   <body >
     <!-- onload="userOne();userTwo();"  -->
     <h3>Enter The Input For Object Equality</h3>
-    <form>
+    <form  method="post">
+
       <table>
     <tr><td>First Name::</td><td><input type="Text" id="firstName" ></td></tr>
     <tr><td>Last Name::</td><td><input type="text" id="lastName"></td></tr>
-    <tr><td>Age::</td><td><input type="text" id="age"></td></tr>
+    <tr><td>Age::</td><td><input type="Number" id="age"></td></tr>
     <tr><td>Country::</td><td><input type="text" id="country"></td></tr>
     <tr><tr></tr></tr>
       <tr><td><input type="button" value="userOneSubmit" Onclick="userOne()"><td></tr>
         <tr><td><input type="button" value="usertwoSubmit" Onclick="userTwo()"><td></tr>
+            <tr><td><input type="button" name="" value="Result" onclick="display()"></td></tr>
   </table>
-  <input type="button" name="" value="Result" onclick="display()">
+
 
   </form>
   </body>

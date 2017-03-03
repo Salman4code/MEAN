@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    function init() {
+       // Retrieving the text input's value which was stored into localStorage
+        var name = localStorage.getItem("name");
+        var Age = localStorage.getItem("Age");
+       var rollno=localStorage.getItem("rollno");
+
+      // Writing the value in the document
+        document.write("Name :"+name+"<br>");
+        document.write("Age  :"+Age+"<br>");
+        document.write("Rollno:"+rollno+"<br>");
+    }
+    </script>
+  </head>
+  <body onload="init();">
+
+  </body>
+</html>
