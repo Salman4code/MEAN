@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="StyleSheet" type="text/css" href="golfgame.css">
+    <script src="golfgame.js">
+
+    </script>
+  </head>
+  <body>
+    <h2>Welcome to Golf Game</h2>
+
+    <table>
+      <tr>Please Enter Number between 0 to 10</tr>
+<tr><td>Stroke::</td><td><input type="number" id="stroke" value=""></td></tr>
+<tr><td>Par::</td><td><input type="number" id="par" value=""></td></tr>
+<tr><td><button type="button" onclick="gameCalculation(Number.parseInt(document.getElementById('stroke').value),Number.parseInt(document.getElementById('par').value))">Submit</button></td></tr>
+<tr><td><p id="demo"></p></td></tr>
+</table>
+  </body>
+</html>

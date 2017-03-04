@@ -29,7 +29,7 @@ console.log(userinput1);
 return userinput1;
 }
 function finalResult() {
-//  var np=userinput1
+//  var np=userinput
  if(userinput.firstname===userinput1.firstname && userinput.lastname===userinput1.lastname && userinput.age===userinput1.age && userinput.country===userinput1.country)
 //if(userinput===userinput1)
 //if(userinput===np)
@@ -46,10 +46,12 @@ function display()
   var eq1=finalResult();
   if(eq1)
   {
-    document.write("Object Are Equal");
+    //document.write("Object Are Equal");
+    document.getElementById('result').value="Object are Equal";
   }
   else {
-    document.write("Object are not equal");
+  //  document.write("Object are not equal");
+    document.getElementById('result').value="Object are not Equal";
   }
 }
 //   console.log(userinput.firstname==userinput1.firstname);

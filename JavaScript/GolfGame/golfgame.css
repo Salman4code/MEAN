@@ -1,0 +1,9 @@
+table{
+  margin: 20px;
+  border: 1px solid red;
+  padding:50px;
+}
+body{
+  background-color: powderblue;
+  align-items: center;
+}

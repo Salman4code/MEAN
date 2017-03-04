@@ -20,7 +20,8 @@ function addcolumn()
   c=document.createElement("td");
   t=document.createTextNode("New Column");
   c.appendChild(t);
-r.appendChild(c);
+
+  r.appendChild(c);
 // document.getElementById('mytr').appendChild(c);
 //   var table=document.getElementById('mytable');
 //   var col=table.inserColumn(0);

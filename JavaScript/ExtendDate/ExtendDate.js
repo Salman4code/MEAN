@@ -18,6 +18,7 @@ dat.nextday=function(){
 document.write("<br><br> Next Day::"+day[d.getDay()]);
 document.write("<br><br> Next Date::"+day[d.getDay()]+"--"+d.getDate()+","+month[d.getMonth()]+"--"+d.getFullYear());
 //return dt;
+return this;
 };
 window.onload =dat.nextday();
 //document.getElementById("id").value= myfun.getDate();

@@ -1,4 +1,4 @@
-var mylist=[[],[]];
+var mylist=[["Chocolate",1]];
 
 function push()
 {
