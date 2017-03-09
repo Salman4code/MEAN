@@ -1,4 +1,4 @@
-
+var alltext;
  function readTextFile()
 {
     var rawFile = new XMLHttpRequest();
@@ -10,7 +10,7 @@
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-               var allText = rawFile.responseText;
+                allText = rawFile.responseText;
                  alert(allText);
             }
         }
@@ -62,5 +62,5 @@ this.size++;
 };
 var list =new linkedlist();
 list.push('hi');
-console.log(list);
+console.log(allText);
 }

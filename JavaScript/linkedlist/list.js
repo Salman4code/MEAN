@@ -1,4 +1,4 @@
-window.onload=function myfun()
+function myfun()
 {
 function linkedlist()
 {
@@ -76,53 +76,75 @@ linkedlist.prototype.remove = function (value) {
     return;
   }
   var prev=null;
-  var current=this.head;
-  while(current.data!==null)
+  var curr=this.head;
+  while(curr.data!==null)
   {
-    prev =current;
-    current=current.next;
+    prev =curr;
+    current=curr.next;
   }
-  prev.next=current.next;
+  prev.next=curr.next;
 };
 linkedlist.prototype.display = function () {
-  if(isEmpty)
+  if(this.head===null)
   {
     //document.write("linkedlist is Empty");
     console.log("linkedlist is Empty");
     return;
   }
   var current = this.head;
+  console.log(current.data+"->");
+  current=current.next;
+  while(current!==null)
+  {
+    console.log(current.data+"->");
+    current=current.next;
+  }
+//  console.log(current.data);
 
 };
 var list = new linkedlist();
-var str=readTextFile();
+readTextFile().then(function (data) {
+  console.log(data);//success
+}).catch(function (err) {
+ console.error(err);
+  //error
+})
 //var str1=str.toString();
-console.log(str);
+
 list.insertAtStart(10);
 list.insertAtEnd(5);
-list.remove(5);
-console.log(list);
-
-function readTextFile()
-{
-  var allText,str1;
-   var rawFile = new XMLHttpRequest();
-   //file="/home/bridgeit/MEAN/JavaScript/linkedlist/abc.txt";
-  rawFile.open("GET","abc.txt", true);
-  rawFile.onreadystatechange = function ()
-   {
-       if(rawFile.readyState === 4)
-       {
-           if(rawFile.status === 200 || rawFile.status == 0)
-           {
-               allText = rawFile.responseText;
-                alert(allText);
-                 str1=allText.toString();
-                console.log(str1);
-
-           }
-       }
- };
-    rawFile.send(str1);
+//list.remove(5);
+list.display();
+//console.log(list);
 }
+var str1,allText;
+function readTextFile(cfunction)
+{
+return new Promise(function(resolve, reject) {
+  var rawFile = new XMLHttpRequest();
+  //file="/home/bridgeit/MEAN/JavaScript/linkedlist/abc.txt";
+ rawFile.open("GET","abc.txt", true);
+ rawFile.onreadystatechange = function ()
+  {
+      if(rawFile.readyState === 4)
+      {
+          if(rawFile.status === 200 || rawFile.status == 0)
+          {
+              allText = rawFile.responseText;
+               alert(allText);
+                str1=allText.toString();
+               resolve(str1);
+               return str1;
+          }else {
+            reject("error");
+          }
+      }
+};
+   rawFile.send();
+});
+
+}
+function cfunction(rawFile)
+{
+document.getElementById('demo').innerHTML=rawFile.responseText;
 }
