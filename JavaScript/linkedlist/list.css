@@ -1,0 +1,14 @@
+table,tr,td{
+  border: 1px solid black;
+  padding: 5%;
+  color: blue;
+  background-color: powderblue;
+}
+button
+{
+  background-color: inherit;;
+}
+body
+{
+  background-color: aqua;
+}

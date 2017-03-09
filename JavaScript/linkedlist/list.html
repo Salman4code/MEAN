@@ -3,19 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="Stylesheet" type="text/css" href="list.css">
     <script type="text/javascript" src="list.js">
 
     </script>
   </head>
   <body>
-    <!-- <button type="button" name="button" onclick="cfunction()">gettext</button><br> -->
-    <p id='demo'></p>
-    <div id='print'></div>
-    <button type="button" name="button" onclick="insertAtStart()">Push</button>
-    <button type="button" name="button" onclick="remove()">Pop</button>
-    <button type="button" name="button" onclick="search()">Search</button>
-    <button type="button" name="button" onclick="isEmpty()">status</button>
-    <button type="button" name="button" onclick="myfun()">Submit</button>
 
+    <!-- <button type="button" name="button" onclick="cfunction()">gettext</button><br> -->
+    <table>
+    <tr>
+      <td>
+          <div id='print' class="abc"><b>Data from file</b></div>
+    <p id='demo'></p>
+
+  </td>
+  </tr>
+  <tr>
+    <!-- <td>Enter String for search<input type="text" id="text" value=""></td> -->
+
+  </tr>
+  <tr>
+    <td>
+    <button type="button" name="button" onclick="push()">Push</button>
+    <button type="button" name="button" onclick="pop()">Pop first Element</button>
+    <button type="button" name="button" onclick="remove()">Pop  Element</button>
+    <button type="button" name="button" onclick="search()">Search</button>
+    <button type="button" name="button" onclick="isEmpty()">linkedlist status</button>
+    <button type="button" name="button" onclick="display()">display</button>
+</td>
+</tr>
+</table>
   </body>
 </html>

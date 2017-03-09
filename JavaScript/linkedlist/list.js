@@ -1,5 +1,4 @@
-function myfun()
-{
+
 function linkedlist()
 {
   this.head=null;
@@ -86,38 +85,53 @@ linkedlist.prototype.remove = function (value) {
   }
   prev.next=curr.next;
 };
+linkedlist.prototype.pop = function () {
+  if(this.head==null)
+  {
+    console.log("linkedlist is Empty");
+    return false;
+  }
+  this.head=this.head.next;
+return true;
+};
 linkedlist.prototype.display = function () {
   if(this.head===null)
   {
     //document.write("linkedlist is Empty");
     console.log("linkedlist is Empty");
+    alert("linkedlist is Empty");
     return;
   }
   var current = this.head;
-  console.log(current.data+"->");
-  document.getElementById('demo').innerHTML=current.data;
-  current=current.next;
+  console.log(current.data);
+  //document.getElementById('demo').innerHTML=current.data;
+  //current=current.next;
+  var d=document.getElementById("print");
+  d.innerHTML="";
   while(current!==null)
   {
-    console.log(current.data+"->");
-    var d=document.getElementById('print');
+    console.log(current.data);
+
     var p=document.createElement("p");
     var c=document.createTextNode(current.data);
-    p.appendChild(c)
+    p.appendChild(c);
     d.appendChild(p);
     //document.getElementById('demo').innerHTML=current.data+"->";
     current=current.next;
   }
+   c=document.createTextNode(this.data);
+p.appendChild(c);
+d.appendChild(p);
 //  console.log(current.data);
 
 };
 var list = new linkedlist();
 var str,str1,allText;;
 readTextFile().then(function (data) {
-  console.log(data);//success
+//  console.log(data);//success
 
   str =data.split(" ");
-  document.getElementById('demo').innerHTML=str;
+  //document.getElementById('demo').innerHTML=str;
   //var str1=str.toString();
 for (var i = 0; i < str.length; i++) {
 var temp =str[i];
@@ -135,11 +149,41 @@ list.insertAtEnd(temp);
 }).catch(function (err) {
  console.error(err);
   //error
-})
-// function isEmpty()
-// {
-// list.isEmpty();
-// }
+});
+
+ function pop()
+{
+ list.pop();
+ list.display();
+ }
+function push()
+{
+  var value=prompt("Enter String to insert in linkedlist")
+  list.insertAtEnd(value);
+  list.display();
+}
+function search() {
+  // var value=document.getElementById('text').value;
+  var value=prompt("Enter String for search")
+  if(list.contain(value))
+  {
+    console.log("present");
+    alert("String Found");
+  }
+  else {
+    console.log("Element is not present");
+    alert("String Not Found ");
+  }
+}
+function remove()
+{
+  var value=prompt("Enter String to remove")
+  list.remove(value);
+  list.display();
+}
+function display()
+{
+  list.display();
 }
 function readTextFile(cfunction)
 {
@@ -154,7 +198,7 @@ return new Promise(function(resolve, reject) {
           if(rawFile.status === 200 || rawFile.status == 0)
           {
               allText = rawFile.responseText;
-               alert(allText);
+            //   alert(allText);
                 str1=allText;
                resolve(str1);
                return str1;
