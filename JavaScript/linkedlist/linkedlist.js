@@ -12,11 +12,15 @@ var alltext;
             {
                 allText = rawFile.responseText;
                  alert(allText);
+                 callback(allText);
+            }
+            else {
+              callback(null);
             }
         }
   };
      rawFile.send(null);
-
+}
 // function linkedlist()
 // {
 //   start=null;
@@ -63,4 +67,5 @@ this.size++;
 var list =new linkedlist();
 list.push('hi');
 console.log(allText);
+function filetext()
 }

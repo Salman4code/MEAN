@@ -58,16 +58,18 @@ linkedlist.prototype.contain = function (value) {
 
   while(current!==null)
   {
-    if(current===value)
+    if(current.data===value)
     {
       return true;
     }
+    current=current.next;
   }
   return false;
 };
 linkedlist.prototype.remove = function (value) {
   if(!this.contain(value))
   {
+
     return;
   }
   if(this.head.data===value)
@@ -77,10 +79,10 @@ linkedlist.prototype.remove = function (value) {
   }
   var prev=null;
   var curr=this.head;
-  while(curr.data!==null)
+  while(curr.data!==value)
   {
     prev =curr;
-    current=curr.next;
+    curr=curr.next;
   }
   prev.next=curr.next;
 };
@@ -93,31 +95,52 @@ linkedlist.prototype.display = function () {
   }
   var current = this.head;
   console.log(current.data+"->");
+  document.getElementById('demo').innerHTML=current.data;
   current=current.next;
   while(current!==null)
   {
     console.log(current.data+"->");
+    var d=document.getElementById('print');
+    var p=document.createElement("p");
+    var c=document.createTextNode(current.data);
+    p.appendChild(c)
+    d.appendChild(p);
+    //document.getElementById('demo').innerHTML=current.data+"->";
     current=current.next;
   }
 //  console.log(current.data);
 
 };
 var list = new linkedlist();
+var str,str1,allText;;
 readTextFile().then(function (data) {
   console.log(data);//success
+
+  str =data.split(" ");
+  document.getElementById('demo').innerHTML=str;
+  //var str1=str.toString();
+for (var i = 0; i < str.length; i++) {
+var temp =str[i];
+list.insertAtEnd(temp);
+}
+
+  //list.insertAtEnd('b');
+  //console.log(list.remove('b'));
+  list.display();
+  list.isEmpty();
+  console.log(list.isEmpty());
+  //console.log(list);
+
+
 }).catch(function (err) {
  console.error(err);
   //error
 })
-//var str1=str.toString();
-
-list.insertAtStart(10);
-list.insertAtEnd(5);
-//list.remove(5);
-list.display();
-//console.log(list);
+// function isEmpty()
+// {
+// list.isEmpty();
+// }
 }
-var str1,allText;
 function readTextFile(cfunction)
 {
 return new Promise(function(resolve, reject) {
@@ -132,7 +155,7 @@ return new Promise(function(resolve, reject) {
           {
               allText = rawFile.responseText;
                alert(allText);
-                str1=allText.toString();
+                str1=allText;
                resolve(str1);
                return str1;
           }else {
@@ -143,8 +166,4 @@ return new Promise(function(resolve, reject) {
    rawFile.send();
 });
 
-}
-function cfunction(rawFile)
-{
-document.getElementById('demo').innerHTML=rawFile.responseText;
 }
