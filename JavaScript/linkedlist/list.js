@@ -86,7 +86,8 @@ linkedlist.prototype.remove = function (value) {
   prev.next=curr.next;
 };
 linkedlist.prototype.pop = function () {
-  if(this.head==null)
+  // var current=this.head;
+  if(this.head.data==null)
   {
     console.log("linkedlist is Empty");
     return false;
@@ -104,10 +105,13 @@ linkedlist.prototype.display = function () {
   }
   var current = this.head;
   console.log(current.data);
+  var s=this.size();
+  console.log(s);
   //document.getElementById('demo').innerHTML=current.data;
   //current=current.next;
   var d=document.getElementById("print");
   d.innerHTML="";
+  
   while(current!==null)
   {
     console.log(current.data);
@@ -119,16 +123,18 @@ linkedlist.prototype.display = function () {
     //document.getElementById('demo').innerHTML=current.data+"->";
     current=current.next;
   }
-   c=document.createTextNode(this.data);
-p.appendChild(c);
-d.appendChild(p);
+  // c=document.createTextNode(this.data);
+// p.appendChild(c);
+// d.appendChild(p);
 //  console.log(current.data);
 
 };
 var list = new linkedlist();
-var str,str1,allText;;
+var str,str1,allText;
+function loaddatafromfile()
+{
 readTextFile().then(function (data) {
-//  console.log(data);//success
+  data=data.replace(/\r?\n|\r/,'');//success
 
   str =data.split(" ");
   //document.getElementById('demo').innerHTML=str;
@@ -138,19 +144,18 @@ var temp =str[i];
 list.insertAtEnd(temp);
 }
 
-  //list.insertAtEnd('b');
-  //console.log(list.remove('b'));
   list.display();
   list.isEmpty();
   console.log(list.isEmpty());
-  //console.log(list);
+  console.log(list);
 
 
 }).catch(function (err) {
  console.error(err);
-  //error
+ alert("File Not Found")
+  //show error
 });
-
+}
  function pop()
 {
  list.pop();
@@ -159,9 +164,15 @@ list.insertAtEnd(temp);
 function push()
 {
   var value=prompt("Enter String to insert in linkedlist")
+try {
+  if (value==null) throw "please Enter value"
   list.insertAtEnd(value);
-  list.display();
-}
+   list.display();
+
+} catch (e) {
+  alert("please Enter string");
+
+} }
 function search() {
   // var value=document.getElementById('text').value;
   var value=prompt("Enter String for search")
