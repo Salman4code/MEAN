@@ -1,0 +1,14 @@
+table{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+button
+{
+  background-color: aqua;
+  border-radius: 5px;
+}
+body
+{
+  background-color: powderblue;
+}

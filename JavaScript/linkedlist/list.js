@@ -107,11 +107,9 @@ linkedlist.prototype.display = function () {
   console.log(current.data);
   var s=this.size();
   console.log(s);
-  //document.getElementById('demo').innerHTML=current.data;
-  //current=current.next;
   var d=document.getElementById("print");
   d.innerHTML="";
-  
+
   while(current!==null)
   {
     console.log(current.data);
@@ -120,14 +118,23 @@ linkedlist.prototype.display = function () {
     var c=document.createTextNode(current.data);
     p.appendChild(c);
     d.appendChild(p);
-    //document.getElementById('demo').innerHTML=current.data+"->";
     current=current.next;
   }
-  // c=document.createTextNode(this.data);
-// p.appendChild(c);
-// d.appendChild(p);
-//  console.log(current.data);
-
+};
+linkedlist.prototype.print=function()
+{
+  var op='';
+  var current=this.head;
+  while (current!==null) {
+     op+=current.data;
+    if(current.next!==null)
+    {
+      op+=',';
+    }
+  }
+  document.getElementById('pr').innerHTML=op;
+  console.log(op);
+  return op;
 };
 var list = new linkedlist();
 var str,str1,allText;
@@ -163,9 +170,10 @@ list.insertAtEnd(temp);
  }
 function push()
 {
-  var value=prompt("Enter String to insert in linkedlist")
+    var value=document.getElementById('input').value;
+    //var value =prompt("Enter String for search")
 try {
-  if (value==null) throw "please Enter value"
+  if (value=="") throw "please Enter value"
   list.insertAtEnd(value);
    list.display();
 
@@ -174,27 +182,30 @@ try {
 
 } }
 function search() {
-  // var value=document.getElementById('text').value;
-  var value=prompt("Enter String for search")
+  var value=document.getElementById('input').value;
+//  var value=prompt("Enter String for search")
   if(list.contain(value))
   {
-    console.log("present");
-    alert("String Found");
+    console.log("String Found");
+    document.getElementById('pr').innerHTML="String Found";
+    //alert("String Found");
   }
   else {
-    console.log("Element is not present");
-    alert("String Not Found ");
+    console.log("String Not Found");
+    document.getElementById('pr').innerHTML="String Not Found";
   }
 }
 function remove()
 {
-  var value=prompt("Enter String to remove")
+  var value=document.getElementById('input').value;
   list.remove(value);
   list.display();
 }
 function display()
 {
-  list.display();
+  list.print();
+//  list.display();
+
 }
 function readTextFile(cfunction)
 {

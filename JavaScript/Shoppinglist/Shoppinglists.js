@@ -16,8 +16,8 @@ console.log(mylist);
   document.getElementById('print').innerHTML= mylist;
 }
 function unshift() {
-  var it=document.getElementById('item1').value;
-  var qt=document.getElementById('quantity1').value;
+  var it=document.getElementById('item').value;
+  var qt=document.getElementById('quantity').value;
   console.log(mylist.unshift([it,qt]));
   document.getElementById('print').innerHTML= mylist;
 }
