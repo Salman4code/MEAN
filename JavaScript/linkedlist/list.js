@@ -101,8 +101,10 @@ linkedlist.prototype.display = function () {
     //document.write("linkedlist is Empty");
     console.log("linkedlist is Empty");
     alert("linkedlist is Empty");
-    return;
   }
+  else {
+
+
   var current = this.head;
   console.log(current.data);
   var s=this.size();
@@ -120,18 +122,17 @@ linkedlist.prototype.display = function () {
     d.appendChild(p);
     current=current.next;
   }
+}
 };
 linkedlist.prototype.print=function()
 {
-  var op='';
+  var op="";
   var current=this.head;
   while (current!==null) {
-     op+=current.data;
-    if(current.next!==null)
-    {
-      op+=',';
-    }
+     op+=current.data+"<br>";
+     current=current.next;
   }
+//  op+=this.data;
   document.getElementById('pr').innerHTML=op;
   console.log(op);
   return op;
@@ -151,7 +152,8 @@ var temp =str[i];
 list.insertAtEnd(temp);
 }
 
-  list.display();
+  //list.display();
+  list.print();
   list.isEmpty();
   console.log(list.isEmpty());
   console.log(list);
@@ -166,7 +168,8 @@ list.insertAtEnd(temp);
  function pop()
 {
  list.pop();
- list.display();
+ list.print();
+// list.display();
  }
 function push()
 {
@@ -175,7 +178,8 @@ function push()
 try {
   if (value=="") throw "please Enter value"
   list.insertAtEnd(value);
-   list.display();
+  // list.display();
+  list.print();
 
 } catch (e) {
   alert("please Enter string");
@@ -199,7 +203,8 @@ function remove()
 {
   var value=document.getElementById('input').value;
   list.remove(value);
-  list.display();
+  //list.display();
+  list.print();
 }
 function display()
 {

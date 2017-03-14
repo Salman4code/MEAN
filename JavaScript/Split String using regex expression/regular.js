@@ -1,7 +1,7 @@
-window.onload=function myfun(){
-  var str='Tim:20,Henry:30,Linda:35';
-
-var rep=str.replace(/:/g,",")
+function myfun(){
+//  var str='Tim:20,Henry:30,Linda:35';
+var str1 = document.getElementById('text').value
+var rep=str1.replace(/:/g,",")
 //var rep1=rep.replace(/./,",")
 console.log(rep);
 var a=rep.split(",");
