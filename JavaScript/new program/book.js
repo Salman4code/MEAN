@@ -141,7 +141,7 @@ for (var i = 0; i < Object.keys(data.Book2.topics).length; i++) {
   console.log(data.Book3.topics[i]);
 if (value==data.Book3.topics[i]) {
 //s+=JSON.parse(JSON.stringify(data.Book3.name));
-s+=data.Book3.name+"";
+s+=data.Book3.name+",";
 console.log("Book Name::"+data.Book3.name);
 }
 }
@@ -152,8 +152,10 @@ if (value==data.Book1.topics[i]) {
 console.log("Book Name::"+data.Book1.name);
 }
 }
-document.getElementById("name").innerHTML=s;
+s=s.replace(/,(\s+)?$/,'');
 console.log(s);
+document.getElementById("name").innerHTML=s;
+
 }
 class topic extends Book {
   print()
@@ -164,6 +166,7 @@ class topic extends Book {
 }
 function CN()
 {
+  document.getElementById("name").innerHTML="";
 var cn= new topic("Computer Network");
 //b.print();
 cn.displayCN();
@@ -171,11 +174,13 @@ cn.displayCN();
 }
 function CS()
 {
+  document.getElementById("name").innerHTML="";
   var cs=new topic("Computer Security");
   cs.displayCS();
 }
 function DF()
 {
+  document.getElementById("name").innerHTML="";
   var df= new topic("Digital Forensic");
   df.displayDF();
 }
