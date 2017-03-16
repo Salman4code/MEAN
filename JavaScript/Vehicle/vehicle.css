@@ -1,0 +1,27 @@
+table
+{
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+body{
+  background-color: #6699ff;
+
+}
+button
+{
+  background-color: #33cc33;
+  font-size: 20px;
+  height: auto;
+  width: auto;
+  border-radius: 3px;
+}
+input{
+  border-radius: 5px;
+  font-size: 20px;
+}
+.span
+{
+  font-size: 20px;
+}
