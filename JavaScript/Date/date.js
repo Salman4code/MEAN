@@ -5,7 +5,7 @@ function myfun() {
    start = new Date(s);
    end = new Date(e);
    dayname = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-   monthname = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
+   monthname = ["January", "February", "March","April","May","June", "July", "August", "September", "October", "November", "December"];
   //document.getElementById('display').innerHTML = start;
    sdate = start.getDate();
    sday = dayname[start.getDay()];
@@ -42,27 +42,28 @@ function first()
 {
     if(sdate==1 || sdate==21  || sdate==31)
     {
+
       //var s=smonth+" "+sdate+"st";
-      var s=sdate+"st";
-      document.getElementById('display').innerHTML=smonth+" "+sdate+"st";
+      //document.getElementById('display').innerHTML=smonth+" "+sdate+"st";
+        var s=sdate+"st";
       return s;
     }
     else if (sdate==2 || sdate==22) {
     //  var s=smonth+" "+sdate+"nd";
+      //document.getElementById('display').innerHTML=smonth+" "+sdate+"nd";
       var s=sdate+"nd";
-      document.getElementById('display').innerHTML=smonth+" "+sdate+"nd";
       return s;
     }
     else if (sdate==3 || sdate==23) {
       //var s=smonth+" "+sdate+"rd";
+      //document.getElementById('display').innerHTML=smonth+" "+sdate+"rd";
       var s=sdate+"rd";
-      document.getElementById('display').innerHTML=smonth+" "+sdate+"rd";
       return s;
     }
     else {
       //var s=smonth+" "+sdate+"th";
+    //document.getElementById('display').innerHTML=smonth+" "+sdate+"th";
       var s=sdate+"th";
-      document.getElementById('display').innerHTML=smonth+" "+sdate+"th";
       return s;
     }
   }
@@ -73,26 +74,26 @@ function second()
   if(edate==1 || edate==21  || edate==31)
   {
     // var e=emonth+" "+edate+"st";
+    //document.getElementById('display').innerHTML=emonth+" "+edate+"st";
     var e=edate+"st";
-    document.getElementById('display').innerHTML=emonth+" "+edate+"st";
     return e;
   }
   else if (edate==2 || edate==22) {
     //var e=emonth+" "+edate+"nd";
+    //document.getElementById('display').innerHTML=emonth+" "+edate+"nd";
     var e=edate+"nd";
-    document.getElementById('display').innerHTML=emonth+" "+edate+"nd";
     return e;
   }
   else if (edate==3 || edate==23) {
     // var e=emonth+" "+edate+"rd";
+    //document.getElementById('display').innerHTML=emonth+" "+edate+"rd";
     var e=edate+"rd";
-    document.getElementById('display').innerHTML=emonth+" "+edate+"rd";
     return e;
   }
   else {
     //var e=emonth+" "+edate+"th,"+edate+"th";
-    var e=edate+"th";
-    document.getElementById('display').innerHTML=emonth+" "+sdate+"th";
+    //document.getElementById('display').innerHTML=emonth+" "+sdate+"th";
+        var e=edate+"th";
     return e;
   }
 

@@ -1,0 +1,15 @@
+.clickMe
+{
+  border: 30px green solid;
+  border-radius: 10px;
+  background: white;
+  color: red
+  width:10%;
+  margin: auto;
+}
+.clickMe:hover{
+  border: 3px red dotted;
+  background: black;
+  color:white;
+
+}
