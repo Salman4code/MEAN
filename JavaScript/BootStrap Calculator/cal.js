@@ -5,10 +5,12 @@ var txt=equ
 var str="";
     $("button").click(function()
       {
-     txt=  $(this).attr("value");
+     txt= $(this).attr("value");
       str+=""+txt;
     //  document.getElementById('demo').innerHTML=txt;
       console.log(str);
+
+
           $("#text1").val(str);
           // var equ=eval(str);
           //  $("#eq").val(equ);
@@ -16,10 +18,17 @@ var str="";
     );
 $("#eq").click(function()
 {
-   equ=eval(str);
-   str=equ;
-  console.log(equ);
-  $("#text1").val(equ);
+
+   try {
+      equ=eval(str);
+     if(!equ) throw "empty"
+     str=equ;
+    console.log(equ);
+    $("#text1").val(equ);
+   } catch (e) {
+     $("#text1").val("Error");
+   }
+
 });
 
 
