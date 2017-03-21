@@ -1,0 +1,22 @@
+body{
+  text-align: justify;
+  background-color: #33ccff;
+  color: darkgoldenrod;
+  font-family:serif;
+  font-style: italic;
+}
+/*#t{
+  font-size: 15px;
+
+}*/
+h1
+{
+  text-align: center;
+  text-shadow: 10%;
+  font-style: oblique;
+  font-family:inherit;
+  color:red;
+}
+#t{
+  text-align: justify;
+}

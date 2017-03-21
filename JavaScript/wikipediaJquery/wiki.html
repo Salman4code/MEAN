@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="wiki.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    $.ajax({
-        type: "GET",
-        url: "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=Sachin_Tendulkar&callback=?",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
+  <script type="text/javascript" src="wiki.js">
 
-            var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
-            $('#article').html($(blurb).find('p'));
+  </script>
+</head>
 
-        },
-        error: function (errorMessage) {
-        }
-    });
-});
-
-</script>
-  </head>
-  <body>
-    <div id="article">
-
+<body>
+  <div class="container-fluid">
+    <h1>Sachin Tendulkar Wikipedia Detail</h1><br><br>
+    <div id="article"></div>
+    <!-- <div id="t"></div> -->
+    <div class="row">
+    <div class="col-sm-5 ">
+      <div class="well table-responsive" id="t">
+      </div>
     </div>
-    <div id="otherWikiArticle">
+    <div class="col-sm-7">
 
+    <div class="well" id="p1"></div>
+    <div class="well" id="p2">
     </div>
-  </body>
+    <div class="well" id="p3">
+    </div>
+    <div class="well" id="p4">
+    </div>
+    </div>
+
+</div>
+  </div>
+</body>
 </html>
